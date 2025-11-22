@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Список товаров</h1>
+    <ul class="products">
+      <script>
+        const products = ["Мышка", "Клавиатура", "Наушники"];
+
+        products.push("Монитор", "Принтер", "Флешка");
+
+        const productsList = document.querySelector(".products");
+
+        for (let i = 0; i < products.length; i++) {
+          const listItem = document.createElement("li");
+          listItem.textContent = products[i];
+          productsList.appendChild(listItem);
+        }
+      </script>
+    </ul>
+  </body>
+</html>

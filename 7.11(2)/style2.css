@@ -1,0 +1,26 @@
+.height-item {
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ffffff;
+}
+
+.controls {
+  margin: 20px 0;
+}
+
+.btn {
+  padding: 8px 15px;
+  margin-right: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  color: white;
+}
+
+#addHeightBtn {
+  background-color: #07a90c;
+}
+
+#filterBtn {
+  background-color: #e18700;
+}
