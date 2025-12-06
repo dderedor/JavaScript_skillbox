@@ -1,28 +1,14 @@
 const STORAGE_KEY = "warehouse_items";
 
-// Получить все записи
 export function getItems() {
-  try {
-    const items = localStorage.getItem(STORAGE_KEY);
-    return items ? JSON.parse(items) : [];
-  } catch (error) {
-    console.error("Ошибка чтения из localStorage:", error);
-    return [];
-  }
+  const items = localStorage.getItem(STORAGE_KEY);
+  return items ? JSON.parse(items) : [];
 }
 
-// Сохранить все записи
 export function saveItems(items) {
-  try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
-    return true;
-  } catch (error) {
-    console.error("Ошибка сохранения в localStorage:", error);
-    return false;
-  }
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
 }
 
-// Добавить новую запись
 export function addItem(item) {
   const items = getItems();
   const newItem = {
@@ -34,18 +20,16 @@ export function addItem(item) {
   };
 
   items.push(newItem);
-  return saveItems(items);
+  saveItems(items);
+  return newItem;
 }
 
-// Удалить запись по ID
 export function deleteItem(id) {
   const items = getItems();
   const filtered = items.filter((item) => item.id !== id);
-  return saveItems(filtered);
+  saveItems(filtered);
 }
 
-// Удалить все записи
 export function clearAll() {
   localStorage.removeItem(STORAGE_KEY);
-  return true;
 }
