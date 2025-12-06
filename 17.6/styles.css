@@ -1,0 +1,148 @@
+/* Основные стили */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0; /* Светло-серый фон */
+  margin: 0;
+  padding: 20px;
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+/* Контейнер для контента */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Заголовок страницы */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Кнопки */
+.btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px; /* Закругленные углы */
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* Кнопка добавить запись (морской волны) */
+.btn-add,
+.btn-submit {
+  background: #1e88e5; /* Морской волны */
+  color: white;
+}
+
+/* Кнопка удалить (темно-бордовая) */
+.btn-delete {
+  background: #8b0000; /* Темно-бордовый */
+  color: white;
+  padding: 4px 12px;
+  font-size: 12px;
+  border-radius: 20px;
+}
+
+.btn-cancel {
+  background: #757575;
+  color: white;
+  margin-top: 10px;
+}
+
+/* Таблица */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: white;
+}
+
+/* Заголовок таблицы черный */
+.table th {
+  background: #000; /* Черный */
+  color: white;
+  padding: 12px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+.table tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+/* Форма добавления */
+.form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+/* Поля ввода - овальные с закругленными углами */
+.form input {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0 15px 0;
+  border: 1px solid #ccc;
+  border-radius: 20px; /* Закругленные углы */
+  font-size: 14px;
+}
+
+.form input:focus {
+  outline: none;
+  border-color: #1e88e5;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+/* Ссылка назад */
+.back-link {
+  color: #1e88e5;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}

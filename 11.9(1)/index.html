@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Форма опроса</title>
+  </head>
+  <body>
+    <h1>Форма опроса</h1>
+
+    <form id="surveyForm">
+      <div>
+        <label>Имя пользователя</label><br />
+        <input type="text" id="username" />
+        <div id="usernameError" style="color: red; display: none">
+          Заполните имя
+        </div>
+      </div>
+      <br />
+
+      <div>
+        <label>Email</label><br />
+        <input type="text" id="email" />
+        <div id="emailError" style="color: red; display: none">
+          Некорректный email
+        </div>
+      </div>
+      <br />
+
+      <div>
+        <label>Пол</label><br />
+        <input type="radio" name="gender" value="Мужской" /> Мужской<br />
+        <input type="radio" name="gender" value="Женский" /> Женский
+        <div id="genderError" style="color: red; display: none">
+          Выберите пол
+        </div>
+      </div>
+      <br />
+
+      <div>
+        <label>Оценка сервиса (1-10): <span id="ratingValue">5</span></label
+        ><br />
+        <input type="range" id="rating" min="1" max="10" value="5" />
+      </div>
+      <br />
+
+      <div>
+        <label>Интересы пользователя:</label><br />
+        <input type="checkbox" value="Спорт" /> Спорт<br />
+        <input type="checkbox" value="Музыка" /> Музыка<br />
+        <input type="checkbox" value="Путешествия" /> Путешествия<br />
+        <input type="checkbox" value="Кино" /> Кино
+      </div>
+      <br />
+
+      <div>
+        <label>Дополнительные комментарии:</label><br />
+        <textarea id="comments"></textarea>
+      </div>
+      <br />
+
+      <button type="submit">Отправить</button>
+    </form>
+
+    <div id="result" style="display: none">
+      <h2>Данные пользователя:</h2>
+      <div id="resultContent"></div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

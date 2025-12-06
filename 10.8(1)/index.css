@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  padding: 20px;
+}
+
+.thumbnails {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.thumbnail {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+
+#fullSize {
+  text-align: center;
+}
+
+#fullSize img {
+  max-width: 90%;
+  max-height: 70vh;
+}
