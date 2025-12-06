@@ -1,0 +1,42 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.center {
+  text-align: center;
+}
+
+#progress-cats,
+#progress-dogs {
+  width: 500px;
+  height: 20px;
+  background-color: purple;
+  transform: scaleX(0);
+  transform-origin: left;
+  margin: 20px 0;
+}
+
+#cats,
+#dogs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+#cats img,
+#dogs img {
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+}
+
+#timer-cats,
+#timer-dogs {
+  font-size: 20px;
+  margin: 10px 0;
+}
